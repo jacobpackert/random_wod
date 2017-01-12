@@ -1,9 +1,14 @@
+$(function() {
+
 $.ajax({
-  url: '/openwods.json',
+  url: 'http://spreadsheets.google.com/feeds/list/1hwe64eKPIU7W-jvzFWR8MUzW9DrQerp67G7QBVxvdjk/od6/public/basic?alt=json&callback=x',
   dataType: 'jsonp',
   success: function(response){
     console.log(response);
+    console.log("hello");
   }
+});
+
 });
 
 
