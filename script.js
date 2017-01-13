@@ -1,16 +1,24 @@
 $(function() {
 
-$.ajax({
-  url: 'http://spreadsheets.google.com/feeds/list/1hwe64eKPIU7W-jvzFWR8MUzW9DrQerp67G7QBVxvdjk/od6/public/basic?alt=json&callback=x',
-  dataType: 'jsonp',
-  success: function(response){
-    console.log(response);
-    console.log("hello");
-  }
-});
+    $.ajax({
+        url: 'https://spreadsheets.google.com/feeds/list/1hwe64eKPIU7W-jvzFWR8MUzW9DrQerp67G7QBVxvdjk/od6/public/values?alt=json',
+        // dataType: 'jsonp',
+        success: function(response) {
+            var wodNumber = Math.floor(response.feed.entry.length * Math.random());
+            var data = response.feed.entry[wodNumber];
+            console.log("Wodnumber is: " + wodNumber);
+            console.log(data);
+            wodname = data.gsx$name.$t;
+            oldscore = data.gsx$score.$t;
+            console.log("wod: " + wodname + " and score: " + oldscore);
+            $('.wodname').html(wodname);
+            $('.oldscore').html(oldscore);
+        }
+    });
 
 });
 
+// https://docs.google.com/spreadsheets/d/1tB8QwJrL1fcKw9qcOW8Cs6UPyv18pfpRUjq_eCXCDH0/pub?output=csv
 
 // var wod111 = {
 // name: "11.1",
