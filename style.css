@@ -3,19 +3,30 @@ body {
 }
 
 p, h1 {
-  color: #FDFDFE;
+  color: #e7e7e9;
+  font-family: 'Inconsolata';
 }
 
 button {
-    background-color: #FDFDFE; /* Green */
+    background-color: #e7e7e9; /* Green */
     border: none;
-    color: #0005D9;
+    color: #2979FF;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    border-radius: 4px;
+    font-size: 36px;
+    border-radius: 6px;
+    box-shadow: 0px 3px 10px #262626;
+    transition: background-color .3s;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    display: block;
+    outline: none;
+}
+
+button:hover {
+  background-color: #fcfcfc;
 }
 
 .container {
@@ -23,7 +34,7 @@ button {
 }
 
 a {
-  color: #FDFDFE;
+  color: #e7e7e9;
 }
 
 a:hover {
@@ -37,4 +48,16 @@ a:hover {
   /* Set the fixed height of the footer here */
   height: 60px;
   /*background-color: #f5f5f5;*/
+  position: relative;
+  margin-top: 50px;
+}
+
+.oldscore {
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  button {
+    width: 100%;
+  }
 }
