@@ -2,9 +2,17 @@ body {
   background-color: #0005D9;
 }
 
-p, h1 {
+p, h1, #projectdescription {
   color: #e7e7e9;
   font-family: 'Inconsolata';
+}
+
+#whatisthis, #projectdescription {
+  font-size: 11px;
+}
+
+#whatisthis {
+  margin-top: 50px;
 }
 
 button {

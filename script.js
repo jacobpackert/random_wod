@@ -30,4 +30,11 @@ $(document).ready(function(){
 
 $('.newwod').on('click', wodCreation);
 
+// Expanding the project description
+$('#whatisthis').click(function(event) {
+    event.preventDefault();
+    console.log('clicked projectdescription');
+    $('#projectdescription').slideToggle();
+});
+
 });
