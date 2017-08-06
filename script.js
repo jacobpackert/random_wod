@@ -10,8 +10,8 @@ $(document).ready(function(){
         //   };
         // });
             console.log(response.feed.entry[0].gsx$description.$t);
-            var wodNumber = Math.floor(response.feed.entry.length * Math.random());
-            var data = response.feed.entry[wodNumber];
+            let wodNumber = Math.floor(response.feed.entry.length * Math.random());
+            let data = response.feed.entry[wodNumber];
             wodname = data.gsx$name.$t;
             description = data.gsx$description.$t;
             if (data.gsx$score.$t == 0) {
